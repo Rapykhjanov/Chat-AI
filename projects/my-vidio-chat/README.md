@@ -1,16 +1,30 @@
-# React + Vite
+# V-Chat AI: Neon Tracking Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A futuristic virtual interview simulator built with **React** and **Tailwind CSS**. This project features a high-end "Cyberpunk" terminal aesthetic, integrating speech recognition to drive a dynamic video-based storytelling engine.
 
-Currently, two official plugins are available:
+## Key Features
+* **Voice-Driven Navigation**: Real-time speech-to-intent processing using the Web Speech API.
+* **Dynamic Scenario Engine**: A state-machine-driven video player that transitions based on user input (Greeting, Weather, Status, etc.).
+* **Neon Terminal UI**: A custom-designed interface featuring glassmorphism, CRT scan-line effects, and CSS-based neon glows.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+* **Frontend**: React.js
+* **Styling**: Tailwind CSS
+* **Speech Processing**: Web Speech Recognition API
 
-## React Compiler
+##  Project Structure
+The core application logic and assets are located here:
+`projects/my-vidio-chat/src/App.jsx`
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Challenges & Solutions
+* **Autoplay Restrictions**: Browsers block video with sound by default. I solved this by ensuring user interaction (Start button) before playback.
+* **State Management**: Developed a robust state listener that only triggers transitions when the player is in the `idle` state to avoid logic conflicts.
+* **Visual Identity**: Implemented a "CRT Monitor" effect using pure CSS to match the futuristic theme of the task.
 
-## Expanding the ESLint configuration
+##  Setup & Installation
+1. Navigate to project folder: `cd projects/my-vidio-chat`
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  License
+MIT
